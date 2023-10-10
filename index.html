@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Home</title>
+	<link rel="icon" type="image/png" sizes="30x30" href="favicon-32x32.png">
+	<script src="https://cdn.tailwindcss.com"></script>
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.css" rel="stylesheet" />
+
+	<!-- darkmode -->
+	<script>
+		// On page load or when changing themes, best to add inline in `head` to avoid FOUC
+		if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+			document.documentElement.classList.add('dark');
+		} else {
+			document.documentElement.classList.remove('dark')
+		}
+	</script>
+</head>
+
+<body class="bg-white dark:bg-gray-900">
+	<!-- Add the following HTML for the dropdown menu -->
+	<div class="sm:hidden">
+		<button id="mobile-menu-btn"
+			class="text-gray-500 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5">
+			<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+				<path fill-rule="evenodd"
+					d="M3 9h14a1 1 0 100-2H3a1 1 0 100 2zm0 4h14a1 1 0 100-2H3a1 1 0 100 2zm0 4h14a1 1 0 100-2H3a1 1 0 100 2z">
+				</path>
+			</svg>
+		</button>
+		<div id="mobile-menu" class="hidden bg-white dark:bg-gray-900 border-gray-200 px-4 py-2 mt-2">
+			<a href="#home"
+				class="block text-gray-500 dark:text-gray-200 hover:text-gray-700 dark:hover:text-gray-400 py-2">Home</a>
+			<a href="#about"
+				class="block text-gray-500 dark:text-gray-200 hover:text-gray-700 dark:hover:text-gray-400 py-2">About</a>
+			<a href="#skills"
+				class="block text-gray-500 dark:text-gray-200 hover:text-gray-700 dark:hover:text-gray-400 py-2">Skills</a>
+			<a href="#resume"
+				class="block text-gray-500 dark:text-gray-200 hover:text-gray-700 dark:hover:text-gray-400 py-2">Resume</a>
+			<a href="#contact"
+				class="block text-gray-500 dark:text-gray-200 hover:text-gray-700 dark:hover:text-gray-400 py-2">Contact</a>
+		</div>
+	</div>
+
+
+	<header class="sticky top-0 z-50">
+		<nav class="hidden sm:flex bg-white border-gray-200 px-4 sm:px-6 py-2.5 dark:bg-gray-900 ml-6 mr-6"
+			style="box-shadow: 0px 14px 12px 0px; border-radius: 5px 5px 25px 25px;">
+			<div class="flex flex-wrap justify-between items-center">
+				<!-- dark mode button -->
+
+				<div>
+
+					<button id="theme-toggle" type="button"
+						class="text-gray-500 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5"
+						style="margin-right: 25px;">
+						<svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+							xmlns="http://www.w3.org/2000/svg">
+							<path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+						</svg>
+						<svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+							xmlns="http://www.w3.org/2000/svg">
+							<path
+								d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+								fill-rule="evenodd" clip-rule="evenodd"></path>
+						</svg>
+					</button>
+				</div>
+
+
+
+				<!-- navigation links with anchor links -->
+				<div class="flex mt-4 lg:mt-0">
+					<a href="#home"
+						class="nav-link text-gray-500 dark:text-gray-200 hover:text-gray-700 dark:hover:text-gray-400 px-3 py-2">Home</a>
+					<a href="#about"
+						class="nav-link text-gray-500 dark:text-gray-200 hover:text-gray-700 dark:hover:text-gray-400 px-3 py-2">About</a>
+					<a href="#skills"
+						class="nav-link text-gray-500 dark:text-gray-200 hover:text-gray-700 dark:hover:text-gray-400 px-3 py-2">Skills</a>
+					<a href="#resume"
+						class="nav-link text-gray-500 dark:text-gray-200 hover:text-gray-700 dark:hover:text-gray-400 px-3 py-2">Resume</a>
+					<a href="#contact"
+						class="nav-link text-gray-500 dark:text-gray-200 hover:text-gray-700 dark:hover:text-gray-400 px-3 py-2">Contact</a>
+				</div>
+			</div>
+		</nav>
+	</header>
+
+	<!-- Sections with corresponding IDs -->
+	<div
+		class="flex flex-col sm:flex-row justify-center sm:justify-between p-4 md:px-6 lg:px-8 mx-auto max-w-screen-lg mt-4 shadow-md rounded-t-lg">
+		<section id="home" class="my-8 text-center px-4 md:px-0">
+			<h1 class="text-4xl font-bold text-blue-600">Welcome to Your Website</h1>
+			<p class="text-lg mt-4 text-gray-600">This is the home section. Replace this text with your actual home
+				content.</p>
+		</section>
+
+		<section id="about" class="my-8 text-center px-4 md:px-0">
+			<h2 class="text-3xl font-bold text-blue-600">About Us</h2>
+			<p class="text-lg mt-4 text-gray-600">This is the about section. Replace this text with information about
+				your website or yourself.</p>
+		</section>
+
+		<section id="skills" class="my-8 text-center px-4 md:px-0">
+			<h2 class="text-3xl font-bold text-blue-600">Skills</h2>
+			<p class="text-lg mt-4 text-gray-600">Here are some skills we possess:</p>
+			<ul class="list-disc list-inside mt-4 text-gray-600 mx-auto text-left w-3/4 md:w-1/2">
+				<li class="text-lg">Web Development</li>
+				<li class="text-lg">Graphic Design</li>
+				<li class="text-lg">Data Analysis</li>
+			</ul>
+		</section>
+
+		<section id="resume" class="my-8 text-center px-4 md:px-0">
+			<h2 class="text-3xl font-bold text-blue-600">Resume</h2>
+			<p class="text-lg mt-4 text-gray-600">Work experience and qualifications can be added in this section.</p>
+		</section>
+
+		<section id="contact" class="my-8 text-center px-4 md:px-0">
+			<h2 class="text-3xl font-bold text-blue-600">Contact Us</h2>
+			<p class="text-lg mt-4 text-gray-600">Feel free to reach out to us using the contact information provided
+				below.</p>
+		</section>
+	</div>
+
+
+	<!-- Add the following JavaScript to toggle the mobile menu -->
+	<script>
+		document.addEventListener('DOMContentLoaded', function () {
+			const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+			const mobileMenu = document.getElementById('mobile-menu');
+
+			mobileMenuBtn.addEventListener('click', function () {
+				mobileMenu.classList.toggle('hidden');
+			});
+
+			// Close the mobile menu when a link is clicked
+			mobileMenu.addEventListener('click', function () {
+				mobileMenu.classList.add('hidden');
+			});
+		});
+	</script>
+
+	<!-- Script to handle section visibility -->
+	<script>
+		document.addEventListener('DOMContentLoaded', function () {
+			const sections = document.querySelectorAll('section');
+			const navLinks = document.querySelectorAll('.nav-link');
+
+			// Hide all sections except the default one
+			sections.forEach(section => {
+				if (section.id !== 'home') {
+					section.style.display = 'none';
+				}
+			});
+
+			navLinks.forEach(link => {
+				link.addEventListener('click', function (e) {
+					e.preventDefault();
+					const targetId = this.getAttribute('href').substring(1);
+					showSection(targetId);
+				});
+			});
+
+			window.addEventListener('scroll', function () {
+				const scrollPosition = window.scrollY;
+				let visibleSectionId = 'home';
+
+				sections.forEach(section => {
+					const sectionTop = section.offsetTop - 50;
+					const sectionBottom = sectionTop + section.offsetHeight;
+
+					if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+						visibleSectionId = section.id;
+					}
+				});
+
+				showSection(visibleSectionId);
+			});
+
+			function showSection(sectionId) {
+				sections.forEach(section => {
+					section.style.display = 'none';
+				});
+
+				const targetSection = document.getElementById(sectionId);
+				if (targetSection) {
+					targetSection.style.display = 'block';
+				}
+			}
+		});
+	</script>
+
+	<!-- flowbite/cdn source map -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.js"></script>
+	<!-- dark mode -->
+	<script>
+		var themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+		var themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+
+		// Change the icons inside the button based on previous settings
+		if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+			themeToggleLightIcon.classList.remove('hidden');
+		} else {
+			themeToggleDarkIcon.classList.remove('hidden');
+		}
+
+		var themeToggleBtn = document.getElementById('theme-toggle');
+
+		themeToggleBtn.addEventListener('click', function () {
+
+			// toggle icons inside button
+			themeToggleDarkIcon.classList.toggle('hidden');
+			themeToggleLightIcon.classList.toggle('hidden');
+
+			// if set via local storage previously
+			if (localStorage.getItem('color-theme')) {
+				if (localStorage.getItem('color-theme') === 'light') {
+					document.documentElement.classList.add('dark');
+					localStorage.setItem('color-theme', 'dark');
+				} else {
+					document.documentElement.classList.remove('dark');
+					localStorage.setItem('color-theme', 'light');
+				}
+
+				// if NOT set via local storage previously
+			} else {
+				if (document.documentElement.classList.contains('dark')) {
+					document.documentElement.classList.remove('dark');
+					localStorage.setItem('color-theme', 'light');
+				} else {
+					document.documentElement.classList.add('dark');
+					localStorage.setItem('color-theme', 'dark');
+				}
+			}
+
+		});
+	</script>
+</body>
+
+</html>
