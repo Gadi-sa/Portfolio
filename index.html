@@ -6,9 +6,10 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Home</title>
-	<link rel="icon" type="image/png" sizes="30x30" href="favicon-32x32.png">
+	<!-- <link rel="icon" type="image/png" sizes="30x30" href="favicon-32x32.png"> -->
 	<script src="https://cdn.tailwindcss.com"></script>
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.css" rel="stylesheet" />
+
 
 	<!-- darkmode -->
 	<script>
@@ -34,27 +35,28 @@
 		</button>
 		<div id="mobile-menu" class="hidden bg-white dark:bg-gray-900 border-gray-200 px-4 py-2 mt-2">
 			<a href="#home"
-				class="block text-gray-500 dark:text-gray-200 hover:text-gray-700 dark:hover:text-gray-400 py-2">Home</a>
+			class="nav-link block text-gray-500 dark:text-gray-200 hover:text-red-100 dark:hover:text-gray-400 py-2
+			transition duration-300 ease-in-out transform hover:shadow-md dark:hover:shadow-md">Home</a>
 			<a href="#about"
-				class="block text-gray-500 dark:text-gray-200 hover:text-gray-700 dark:hover:text-gray-400 py-2">About</a>
+				class="nav-link block text-gray-500 dark:text-gray-200 hover:text-gray-700 dark:hover:text-gray-400 py-2">About</a>
 			<a href="#skills"
-				class="block text-gray-500 dark:text-gray-200 hover:text-gray-700 dark:hover:text-gray-400 py-2">Skills</a>
+				class="nav-link block text-gray-500 dark:text-gray-200 hover:text-gray-700 dark:hover:text-gray-400 py-2">Skills</a>
 			<a href="#resume"
-				class="block text-gray-500 dark:text-gray-200 hover:text-gray-700 dark:hover:text-gray-400 py-2">Resume</a>
+				class="nav-link block text-gray-500 dark:text-gray-200 hover:text-gray-700 dark:hover:text-gray-400 py-2">Resume</a>
 			<a href="#contact"
-				class="block text-gray-500 dark:text-gray-200 hover:text-gray-700 dark:hover:text-gray-400 py-2">Contact</a>
+				class="nav-link block text-gray-500 dark:text-gray-200 hover:text-gray-700 dark:hover:text-gray-400 py-2">Contact</a>
 		</div>
 	</div>
 
 
 	<header class="sticky top-0 z-50">
-		<nav class="hidden sm:flex bg-white border-gray-200 px-4 sm:px-6 py-2.5 dark:bg-gray-900 ml-6 mr-6"
-			style="box-shadow: 0px 14px 12px 0px; border-radius: 5px 5px 25px 25px;">
+		<nav class="hidden sm:flex bg-white border-gray-200 px-4 sm:px-6 py-2.5 dark:bg-gray-900 ml-2 mr-2"
+			style="    box-shadow: 0px 2px 3px 0px; border-radius: 5px 5px 15px 15px;">
 			<div class="flex flex-wrap justify-between items-center">
+
+
 				<!-- dark mode button -->
-
-				<div>
-
+				<div class="ml-6 justify-center">
 					<button id="theme-toggle" type="button"
 						class="text-gray-500 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5"
 						style="margin-right: 25px;">
@@ -74,7 +76,7 @@
 
 
 				<!-- navigation links with anchor links -->
-				<div class="flex mt-4 lg:mt-0">
+				<div class="flex mt-4 lg:mt-0 ">
 					<a href="#home"
 						class="nav-link text-gray-500 dark:text-gray-200 hover:text-gray-700 dark:hover:text-gray-400 px-3 py-2">Home</a>
 					<a href="#about"
@@ -86,6 +88,7 @@
 					<a href="#contact"
 						class="nav-link text-gray-500 dark:text-gray-200 hover:text-gray-700 dark:hover:text-gray-400 px-3 py-2">Contact</a>
 				</div>
+
 			</div>
 		</nav>
 	</header>
@@ -118,7 +121,24 @@
 		<section id="resume" class="my-8 text-center px-4 md:px-0">
 			<h2 class="text-3xl font-bold text-blue-600">Resume</h2>
 			<p class="text-lg mt-4 text-gray-600">Work experience and qualifications can be added in this section.</p>
+
+			<!-- Display the embedded resume without a button -->
+			<div style="position: relative; width: 100%; height: 0; padding-top: 141.4286%;
+				padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
+				border-radius: 8px; will-change: transform;">
+				<iframe loading="lazy"
+					style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0; margin: 0;"
+					src="https://www.canva.com/design/DAFvdkdTCz4/view?embed" allowfullscreen="allowfullscreen"
+					allow="fullscreen">
+				</iframe>
+			</div>
+
+			<!-- Hide the file name link -->
+			<a href="https://www.canva.com/design/DAFvdkdTCz4/view?utm_content=DAFvdkdTCz4&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link"
+				target="_blank" rel="noopener" style="display: none;">Gadisa_Resume23</a>
 		</section>
+
+
 
 		<section id="contact" class="my-8 text-center px-4 md:px-0">
 			<h2 class="text-3xl font-bold text-blue-600">Contact Us</h2>
@@ -126,6 +146,7 @@
 				below.</p>
 		</section>
 	</div>
+
 
 
 	<!-- Add the following JavaScript to toggle the mobile menu -->
@@ -137,11 +158,6 @@
 			mobileMenuBtn.addEventListener('click', function () {
 				mobileMenu.classList.toggle('hidden');
 			});
-
-			// Close the mobile menu when a link is clicked
-			mobileMenu.addEventListener('click', function () {
-				mobileMenu.classList.add('hidden');
-			});
 		});
 	</script>
 
@@ -150,6 +166,7 @@
 		document.addEventListener('DOMContentLoaded', function () {
 			const sections = document.querySelectorAll('section');
 			const navLinks = document.querySelectorAll('.nav-link');
+			let userScrolling = false; // Flag to track user-initiated scrolling
 
 			// Hide all sections except the default one
 			sections.forEach(section => {
@@ -162,11 +179,17 @@
 				link.addEventListener('click', function (e) {
 					e.preventDefault();
 					const targetId = this.getAttribute('href').substring(1);
+					userScrolling = true; // Set the flag when the user clicks a navigation link
 					showSection(targetId);
 				});
 			});
 
 			window.addEventListener('scroll', function () {
+				if (!userScrolling) {
+					// If it's not user-triggered scrolling, ignore
+					return;
+				}
+
 				const scrollPosition = window.scrollY;
 				let visibleSectionId = 'home';
 
@@ -191,9 +214,14 @@
 				if (targetSection) {
 					targetSection.style.display = 'block';
 				}
+
+				// Reset the flag after showing the section
+				userScrolling = false;
 			}
 		});
 	</script>
+
+
 
 	<!-- flowbite/cdn source map -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.js"></script>
