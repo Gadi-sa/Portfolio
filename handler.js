@@ -99,3 +99,15 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+// dynamic greeting based on the time of day
+const greetingDiv = document.getElementById('greeting');
+const now = new Date();
+const hour = now.getHours();
+if (hour < 12) {
+    greetingDiv.textContent = 'Good Morning!';
+} else if (hour < 18) {
+    greetingDiv.textContent = 'Good Afternoon!';
+} else {
+    greetingDiv.textContent = 'Good Evening!';
+}
+greetingDiv.className += ' mb-2'; 

@@ -5,7 +5,7 @@
 	<meta charset="UTF-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>Home</title>
+	<title>Gadisa Ahmed - Software Developer</title>
 	<!-- <link rel="icon" type="image/png" sizes="30x30" href="favicon-32x32.png"> -->
 	<script src="https://cdn.tailwindcss.com"></script>
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.css" rel="stylesheet" />
@@ -29,18 +29,10 @@
 			document.documentElement.classList.remove("dark");
 		}
 	</script>
-
-	<!-- <style>
-		#logth {
-			font-family: "kosetsu-solid", sans-serif;
-			font-weight: 400;
-			font-style: normal;
-		}
-	</style> -->
 </head>
 
 <body class="bg-white dark:bg-gray-900">
-	<!-- Add the following HTML for the dropdown menu -->
+	<!-- dropdown menu -->
 	<div class="sm:hidden">
 		<button id="mobile-menu-btn"
 			class="text-gray-500 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5">
@@ -50,17 +42,17 @@
 				</path>
 			</svg>
 		</button>
+		<!-- Logo -->
+		<div class="absolute top-0 right-0 mt-2 mr-2">
+			<img src="logoai.png" alt="Logo" class="h-6">
+		</div>
 		<div id="mobile-menu" class="hidden bg-white dark:bg-gray-900 border-gray-200 px-4 py-2 mt-2">
 			<a href="#home"
 				class="nav-link block text-gray-500 dark:text-gray-200 hover:text-red-700 dark:hover:text-gray-800 py-2">Home</a>
-			<a href="#about"
-				class="nav-link block text-gray-500 dark:text-gray-200 hover:text-red-700 dark:hover:text-gray-100 py-2">About</a>
 			<a href="#skills"
 				class="nav-link block text-gray-500 dark:text-gray-200 hover:text-red-700 dark:hover:text-gray-100 py-2">Skills</a>
 			<a href="#resume"
 				class="nav-link block text-gray-500 dark:text-gray-200 hover:text-red-700 dark:hover:text-gray-100 py-2">Resume</a>
-			<a href="#contact"
-				class="nav-link block text-gray-500 dark:text-gray-200 hover:text-red-700 dark:hover:text-gray-100 py-2">Contact</a>
 		</div>
 	</div>
 
@@ -69,24 +61,20 @@
 			style="box-shadow: 0px 2px 2px 0px; border-radius: 2px 2px 15px 15px">
 			<!-- Logo -->
 			<div class="flex items-center ml-2">
-				<img src="logo2.png" alt="Logo" class="h-6 filter drop-shadow-md dark:drop-shadow-lg dark:text-white dark:filter-invert dark:filter-drop-shadow-white">
+				<img src="logoai.png" alt="Logo" class="h-8">
 			</div>
 
 			<!-- Navigation links with anchor links -->
 			<div class="flex items-center space-x-3">
 				<a href="#home"
 					class="nav-link transition duration-500 ease-in-out text-gray-500 dark:text-gray-200 hover:text-red-500 dark:hover:text-red-500 px-3 py-2">Home</a>
-				<a href="#about"
-					class="nav-link transition duration-500 ease-in-out text-gray-500 dark:text-gray-200 hover:text-red-500 dark:hover:text-red-500 px-3 py-2">About</a>
 				<a href="#skills"
 					class="nav-link transition duration-500 ease-in-out text-gray-500 dark:text-gray-200 hover:text-red-500 dark:hover:text-red-500 px-3 py-2">Skills</a>
 				<a href="#resume"
 					class="nav-link transition duration-500 ease-in-out text-gray-500 dark:text-gray-200 hover:text-red-500 dark:hover:text-red-500 px-3 py-2">Resume</a>
-				<a href="#contact"
-					class="nav-link transition duration-500 ease-in-out text-gray-500 dark:text-gray-200 hover:text-red-500 dark:hover:text-red-500 px-3 py-2">Contact</a>
 			</div>
 
-			<!-- Dark mode button -->
+			<!-- Dark/light mode button -->
 			<div class=" justify-center mr-2">
 				<button id="theme-toggle" type="button"
 					class="text-gray-500 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5">
@@ -111,29 +99,60 @@
 		style="box-shadow: 0px 6px 4px 0px; border-radius: 10px 10px 15px 15px">
 
 		<!-- home section -->
-		<section id="home" class="my-8 text-center px-4 md:px-0">
-			<div class="flex items-center space-x-12">
-				<div class="text-left">
-					<span
-						class="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-800 to-red-600 dark:from-gray-300 dark:to-gray-100">GADISA
-						AHMED</span>
-					<span
-						class="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-gray-800 to-gray-600 dark:from-gray-300 dark:to-gray-100">Software
-						Developer</span>
+		<section id="home" class="py-8 px-4 text-center">
+			<div class="container mx-auto flex flex-col items-center">
+				<img src="gadisa.png" alt="Gadisa Ahmed"
+					class="w-30 h-30 md:w-60 md:h-60 rounded-full shadow-lg mb-8 animate-bounce-slow">
+				<div class="text-lg text-gray-700 dark:text-gray-300 mb-2">
+					Hi there, <span id="greeting"></span>! <span
+						class="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-800 to-red-600 dark:from-gray-300 dark:to-gray-100">
+						I'm Gadisa Ahmed. </span>
 				</div>
 
+				<h2
+					class="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-gray-700 to-gray-500 dark:from-gray-300 dark:to-gray-100 mb-4">
+					A Passionate Software Developer
+				</h2>
+				<div class="space-x-4">
+					<div class="mt-4 flex justify-center items-center">
 
-				<img src="homie.png" alt="Gadisa Ahmed" class="w-80 h-80  rounded-full shadow-md">
+						<!-- Github -->
+						<div class="mx-4">
+							<a href="https://github.com/Gadi-sa" target="_blank" rel="noopener noreferrer"
+								class="hover:text-blue-600 transition-colors duration-300">
+								<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 fill-current"
+									viewBox="0 0 24 24">
+									<path
+										d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+								</svg>
+							</a>
+						</div>
+						<!-- Linkedin -->
+						<div class="mx-4">
+							<a href="https://www.linkedin.com/in/gadisa-a-5a99381b5/" target="_blank"
+								rel="noopener noreferrer" class="hover:text-blue-600 transition-colors duration-300">
+								<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 fill-current"
+									viewBox="0 0 24 24">
+									<path
+										d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z" />
+								</svg>
+							</a>
+						</div>
+
+						<!-- Email -->
+						<div class="mx-4" style="margin-top: 2px">
+							<a href="mailto:youremail@example.com" role="button"
+								class="hover:text-blue-600 transition-colors duration-300">
+								<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 fill-current"
+									viewBox="0 0 24 24">
+									<path
+										d="M12 12.75L0 6V5.25C0 4.01 1.01 3 2.25 3h19.5C22.99 3 24 4.01 24 5.25V6L12 12.75zM0 8.25V18c0 1.24 1.01 2.25 2.25 2.25h19.5c1.24 0 2.25-1.01 2.25-2.25V8.25L12 15L0 8.25z" />
+								</svg>
+							</a>
+						</div>
+					</div>
+				</div>
 			</div>
-		</section>
-
-		<!-- about section -->
-		<section id="about" class="my-8 text-center px-4 md:px-0">
-			<h2 class="text-3xl font-bold text-blue-600">About Us</h2>
-			<p class="text-lg mt-4 text-gray-600">
-				This is the about section. Replace this text with information about
-				your website or yourself.
-			</p>
 		</section>
 
 		<!-- skills section -->
@@ -147,82 +166,48 @@
 		</section>
 
 		<!-- resume section -->
-		<section id="resume" class="my-8 text-center px-8 md:px-16">
+		<section id="resume" class="my-8 text-center px-8 md:px-4">
 			<!-- Display the embedded resume without a button -->
 			<div style="
-            position: relative;
-            width: 100%;
-            height: 0;
-            padding-top: 141.4286%;
-            padding-bottom: 0;
-            box-shadow: 0 2px 8px 0 rgba(63, 69, 81, 0.16);
-            margin-top: 1.6em;
-            margin-bottom: 0.9em;
-            overflow: hidden;
-            border-radius: 8px;
-            will-change: transform;
-          ">
+				position: relative;
+				width: 100%;
+				height: 0;
+				padding-top: 141.4286%;
+				padding-bottom: 0;
+				box-shadow: 0 2px 8px 0 rgba(63, 69, 81, 0.16);
+				margin-top: 1.6em;
+				margin-bottom: 0.9em;
+				overflow: hidden;
+				border-radius: 8px;
+				will-change: transform;
+			">
 				<iframe loading="lazy" style="
-              position: absolute;
-              width: 100%;
-              height: 100%;
-              top: 0;
-              left: 0;
-              border: none;
-              padding: 0;
-              margin: 0;
-            " src="https://www.canva.com/design/DAFvdkdTCz4/view?embed" allowfullscreen="allowfullscreen"
-					allow="fullscreen">
+					position: absolute;
+					width: 100%;
+					height: 100%;
+					top: 0;
+					left: 0;
+					border: none;
+					padding: 0;
+					margin: 0;
+				" src="https://www.canva.com/design/DAF2BZhMneQ/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
 				</iframe>
-			</div>
 
-			<!-- Hide the file name link -->
-			<a href="https://www.canva.com/design/DAFvdkdTCz4/view?utm_content=DAFvdkdTCz4&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link"
-				target="_blank" rel="noopener" style="display: none">Gadisa_Resume23</a>
-		</section>
-
-		<section id="contact" class="my-8 text-center px-4 md:px-0">
-			<h2 class="text-3xl font-bold text-blue-600">Contact Us</h2>
-			<p class="text-lg mt-4 text-gray-600">
-				Feel free to reach out to us using the contact information provided
-				below.
-			</p>
-			<div class="mt-8 flex justify-center items-center">
-				<!-- Linkedin -->
-				<div class="mx-4">
-					<a href="https://www.linkedin.com/in/gadisa-a-5a99381b5/" target="_blank" rel="noopener noreferrer"
-						class="hover:text-blue-600 transition-colors duration-300">
-						<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 fill-current" viewBox="0 0 24 24">
-							<path
-								d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z" />
-						</svg>
-					</a>
-				</div>
-
-				<!-- Github -->
-				<div class="mx-4">
-					<a href="https://github.com/Gadi-sa" target="_blank" rel="noopener noreferrer"
-						class="hover:text-blue-600 transition-colors duration-300">
-						<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 fill-current" viewBox="0 0 24 24">
-							<path
-								d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-						</svg>
-					</a>
-				</div>
-
-				<!-- Email -->
-				<div class="mx-4" style="margin-top: 2px">
-					<a href="mailto:youremail@example.com" role="button"
-						class="hover:text-blue-600 transition-colors duration-300">
-						<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 fill-current" viewBox="0 0 24 24">
-							<path
-								d="M12 12.75L0 6V5.25C0 4.01 1.01 3 2.25 3h19.5C22.99 3 24 4.01 24 5.25V6L12 12.75zM0 8.25V18c0 1.24 1.01 2.25 2.25 2.25h19.5c1.24 0 2.25-1.01 2.25-2.25V8.25L12 15L0 8.25z" />
+				<!-- Download Button -->
+				<div class="fixed right-0 top-0 mr-4 mt-4">
+					<a href="Gadisa_Resume.pdf" download>
+						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+							stroke="currentColor" class="w-6 h-6 hover:text-blue-700">
+							<path stroke-linecap="round" stroke-linejoin="round"
+								d="M9 13.5l3 3m0 0l3-3m-3 3v-6m1.06-4.19l-2.12-2.12a1.5 1.5 0 00-1.061-.44H4.5A2.25 2.25 0 002.25 6v12a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18V9a2.25 2.25 0 00-2.25-2.25h-5.379a1.5 1.5 0 01-1.06-.44z" />
 						</svg>
 					</a>
 				</div>
 			</div>
+
 		</section>
 	</div>
+
 
 	<!-- flowbite/cdn source map -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.js"></script>
