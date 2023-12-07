@@ -95,7 +95,7 @@
 
 
 	<!-- Sections with corresponding IDs -->
-	<div class="p-8 md:px-6 lg:px-8 mx-auto max-w-screen-lg mt-4 rounded-t-lg hover:text-red-700"
+	<div class="p-8 md:px-6 lg:px-8 mx-auto max-w-screen-lg mt-4 mb-4 rounded-t-lg hover:text-red-700"
 		style="box-shadow: 0px 6px 4px 0px; border-radius: 10px 10px 15px 15px">
 
 		<!-- home section -->
@@ -155,15 +155,28 @@
 			</div>
 		</section>
 
-		<!-- skills section -->
+		<!-- Skills Section -->
 		<section id="skills" class="my-8 text-center px-4 md:px-0">
-			<hr class="w-48 h-1 mx-auto my-4 bg-gray-100 border-0 rounded md:my-10 dark:bg-gray-700" />
+			<hr class="w-48 h-1 mx-auto m-2 bg-gray-100 border-0 rounded md:my-10 dark:bg-gray-700" />
+			<!--  Skill Level Note -->
+			<div class="mb-4">
+				<div class="bg-gradient-to-r from-red-700 to-gray-300 p-0.4 rounded">
+					<p
+						class="text-xs md:text-sm bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-300 rounded-md shadow-lg px-4 py-2 transform transition duration-500 hover:scale-105">
+						The skill levels represented in the radar chart below are based on actual challenges, projects,
+						and assessments completed at Bit Academy. Each point on the chart correlates to experience
+						points (XP) earned and recorded on the NexEd platform, providing an objective measure of my
+						technical skills.
+					</p>
+				</div>
+			</div>
 			<div class="flex justify-center items-center w-full h-full">
-				<canvas id="radar-chart" class="w-full md:w-3/4 lg:w-1/2"></canvas>
+				<canvas id="radar-chart" class="w-full md:w-3/4 lg:w-1/2 xl:max-w-xl"></canvas>
 			</div>
 			<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 			<script src="radarchart.js"></script>
 		</section>
+
 
 		<!-- resume section -->
 		<section id="resume" class="my-8 text-center px-8 md:px-4">
